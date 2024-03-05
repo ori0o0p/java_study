@@ -33,7 +33,7 @@ public class StringIndexSort {
         contentList.sort(customComparator);
 
         contentList.forEach(System.out::println);
-//     출력 : 
+//     출력 :
 //        Content[index=1, title=첫 번째]
 //        Content[index=1.612.7, title=첫 번째 아들]
 //        Content[index=3.2.1, title=세 번째의 이상한 놈]
