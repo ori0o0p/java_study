@@ -11,3 +11,6 @@ H
 src/gui/ButtonEvent.java,8/3/830a197a5b8fad14189a302f05726de17a2e3d7c
 J
 src/predicate/Example.java,a/c/ac58f7e129ddc8e7e7f462c5293c0ea5d62881a1
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302

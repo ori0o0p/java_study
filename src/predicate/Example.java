@@ -11,7 +11,7 @@ public class Example {
         System.out.println("ABC : " + predicate.test("ABC"));
         System.out.println("BBC : " + predicate.test("BBC"));
         System.out.println("AAA : " + predicate.test("AAA"));
-        
+
 //     출력 :
 //        ABC : true
 //        BBC : false
