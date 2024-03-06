@@ -14,7 +14,7 @@ public class ComparatorExample {
         userList.add(new User("멍청이", 222));
 
         userList.sort((u1, u2) -> u1.age().compareTo(u2.age()));
-        //userList.sort(Comparator.comparing(User::age));
+        //userList.sort(Comparator.comparing(User::age).reversed()); // 역정렬
 
         userList.forEach(System.out::println);
 //     출력 :
