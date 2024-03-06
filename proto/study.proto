@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package example.study;
+
+message TestObject {
+  int32 id = 1;
+  bool isAlive = 2;
+  string name = 3;
+  repeated int32 list = 4;
+}
