@@ -4,17 +4,17 @@ public class ReverseString {
 
     public static void main(String[] args) {
         String str = "Hello World!";
-        String[] reverseArr = str.split("");
+        char[] reverseArr = str.toCharArray();
 
         System.out.println(reverse(reverseArr));
     }
 
-    public static String reverse(String[] arr) {
+    public static String reverse(char[] arr) {
         int first = 0;
         int last = arr.length - 1;
 
         while (first < last) {
-            String tmp = arr[first];
+            char tmp = arr[first];
             arr[first] = arr[last];
             arr[last] = tmp;
 
@@ -22,7 +22,7 @@ public class ReverseString {
             last--;
         }
 
-        return String.join("", arr);
+        return new String(arr);
     }
 
 }
