@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class StreamExample {
 
-    List<Person> person = List.of(
+    static List<Person> person = List.of(
             new Person("김승원", 18, true),
             new Person("바보", 20, true),
             new Person("멍청이", 13, false),
@@ -20,9 +20,12 @@ public class StreamExample {
     );
 
     public static void main(String[] args) {
+        var response = getPersonMapGroupByStupid();
+
+        System.out.println(response);
     }
 
-    public Map<Boolean, Optional<Person>> getPersonMapGroupByStupid() {
+    public static Map<Boolean, Optional<Person>> getPersonMapGroupByStupidMaxAge() {
         return person.stream()
                 .collect(Collectors.groupingBy(
                         Person::isStupid,
@@ -30,6 +33,18 @@ public class StreamExample {
                                 Comparator.comparingInt(Person::age)
                         ))
                 );
+    }
+
+    public static Map<Boolean, List<Person>> getPersonMapGroupByStupid() {
+        var stupid = person.stream()
+                .filter(Person::isStupid)
+                .toList();
+
+        var notStupid = person.stream()
+                .filter(p -> !p.isStupid())
+                .toList();
+
+        return null;
     }
 
     public List<Integer> getFilteredPersonAndSortedByAge() {
@@ -62,7 +77,6 @@ public class StreamExample {
     }
 
     public record Person(String name, int age, boolean isStupid) {}
-
 
 }
 
